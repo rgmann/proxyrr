@@ -64,7 +64,7 @@ class RequestHandlerContext:
             params = params if type(params) is dict else {}
         
         else:
-            raise 'Unsupported request type'
+            raise Exception('Unsupported request type')
 
         return params
 
@@ -81,7 +81,7 @@ class RequestHandlerContext:
                 self.environment_variables.update({key : os.environ.get(key)})
 
             elif required:
-                raise 'FATAL: Environment variable \'{}\' not set'.format(key)
+                raise Exception('FATAL: Environment variable \'{}\' not set'.format(key))
 
     def configure_logging_context(self):
         logging.basicConfig(level=logging.DEBUG)
@@ -161,7 +161,7 @@ class RequestHandler:
         self.validation_schema = validation_schema
 
     def execute(self, context : RequestHandlerContext):
-        raise 'Execute method must be overriden by subclass'
+        raise Exception('Execute method must be overriden by subclass')
 
     def process_request(self, context : RequestHandlerContext):
 
