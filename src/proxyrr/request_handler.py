@@ -5,7 +5,7 @@ import logging
 import urllib
 import jsonschema
 from enum import Enum
-from proxy_error import ProxyError
+from .proxy_error import ProxyError
 
 class MethodType(Enum):
     UNSUPPORTED = 0
