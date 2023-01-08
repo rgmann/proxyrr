@@ -1,0 +1,18 @@
+[project]
+name = "proxyrr"
+version = "1.0.0"
+requires-python = ">=3.9"
+readme = "README.md"
+dependencies = [
+    'typing_extensions',
+    'jsonschema',
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
