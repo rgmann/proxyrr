@@ -2,6 +2,10 @@
 
 This module provides a framework receiving and responding to proxy resource REST API requests.
 
+## Status
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/rgmann/proxyrr/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/rgmann/proxyrr/tree/main)
+
 ## Usage
 
 ```python
